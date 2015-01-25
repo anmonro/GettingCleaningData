@@ -1,0 +1,24 @@
+
+
+The structure of the scripts is defined as follows:
+  
+  - Set directory and download dataset
+  
+  - Load datasets with read.table function
+  
+  - Merge training and test datasets to create one dataset.
+    Here I use rbind function to join datasets
+  
+  - Extracts only the measurements on the mean and standard deviation for each measurement.
+    I use grep() and  gsub() functions to clear an rename variables.
+
+  - Uses descriptive activity names to name the activities in the data set
+    I use tolower() and gsub() functions to convert to lower case and split the words to get the first letter capitalize
+
+  - Appropriately labels the data set with descriptive variable names.
+    Change name of subject dataset and create a dataset with cbind function joining datasets.
+
+  - From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+    Using doBy library I apply mean to subject+activity pair combinations. 
+
+
